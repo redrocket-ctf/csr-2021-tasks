@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block content %}
+<div>
+                    <section class="u-headlines u-headlines--view-contentsize u-headlines--list-style-none" style="padding:1.25rem;display:block;">
+                        <div class="u-headlines__section-header" style="margin-bottom: 1.75rem;font-family: Source Sans Pro,sans-serif;font-weight: 400;">
+                            <div class="u-sectionheader">
+                                <div class="u-sectionheader__left" style="display: flex;-webkit-box-flex: 1;flex-grow: 1;box-sizing: border-box;">
+                                    <h2 class="u-sectionheader__headline" style="border-bottom: .125rem solid #af292e;color: #af292e;display: inline-block;font-family: Arial,monospace;font-size: .875rem;font-weight: 700;letter-spacing: .09375rem;line-height: .875rem;margin-bottom: -.0625rem;padding: .4375rem 0;text-transform: uppercase;">
+                                        Profile
+                                    </h2>
+                                </div>
+                                <div class="u-sectionheader__right"></div>
+                            </div>
+                        </div>
+
+                        <div class="u-headlines__teasers">
+                            <div class="u-headlines__teaser">
+                                <div class="u-teaser__content">
+                                    <p><strong>Your account will be activated within the next five working days.</strong></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="u-headlines__teasers">
+                            <div class="u-headlines__teaser">
+                                <div class="u-teaser__content">
+                                    <h3>Invoices:</h3>
+                                    <ol>
+                                        {% for inv in invoices %}
+                                        <li><a href="/legacy_invoice_system/{{ inv.url }}">{{ inv.display_name }}</a></li>
+                                        {% endfor %}
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+
+{% endblock %}

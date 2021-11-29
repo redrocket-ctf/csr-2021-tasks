@@ -1,0 +1,2 @@
+CREATE USER invoice;
+ALTER USER invoice WITH PASSWORD 'kurbel13';

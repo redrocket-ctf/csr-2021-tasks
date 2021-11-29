@@ -1,0 +1,12 @@
+service spbank
+{
+# Our service is not in /etc/hosts
+type         = UNLISTED
+protocol     = tcp
+socket_type  = stream
+port         = 2222
+server       = /app/ssh.py
+user         = nssh
+wait         = no
+}
+

@@ -1,0 +1,16 @@
+{
+  "name": "eth-flag-server",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "@truffle/hdwallet-provider": "^1.4.1",
+    "cors": "^2.8.5",
+    "ethereumjs-util": "^7.0.10",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "web3": "^1.4.0"
+  }
+}

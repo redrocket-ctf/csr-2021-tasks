@@ -1,0 +1,61 @@
+version: "3"
+
+services:
+  chain0:
+    restart: always
+    container_name: chain0
+    image: trufflesuite/ganache-cli:latest
+    ports:
+      - "8545:8545"
+    volumes:
+      - ./data/chain:/var/lib/chain
+    command: -i 1337 --defaultBalanceEther 100000 --mnemonic 'rookie hello sock parrot era beef wolf scheme hill peace invite fix' --db /var/lib/chain/
+    networks:
+      ctfnet:
+        ipv4_address: 172.6.0.100
+
+  explorer:
+    restart: always
+    container_name: explorer
+    ports:
+      - "8000:80"
+    image: alethio/ethereum-lite-explorer
+    environment:
+      APP_NODE_URL: http://ethereum.rumble.host:8545
+    networks:
+      - ctfnet
+
+  flags:
+    restart: always
+    depends_on:
+      - chain0
+    container_name: flags
+    build:
+      context: './flag-server'
+    ports:
+      - "3001:1337"
+    networks:
+      ctfnet:
+        ipv4_address: 172.6.0.101
+
+  webapp:
+    restart: always
+    depends_on:
+      - chain0
+      - flags
+    image: nginx
+    container_name: webapp
+    volumes:
+      - ./webapp:/usr/share/nginx/html
+      - ./data/webapp/default.conf:/etc/nginx/conf.d/default.conf
+    ports:
+      - "8080:80"
+    networks:
+      - ctfnet
+
+networks:
+  ctfnet:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.6.0.0/24

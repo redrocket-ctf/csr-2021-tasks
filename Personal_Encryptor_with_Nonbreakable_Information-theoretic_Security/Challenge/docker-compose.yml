@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  chall:
+    restart: always
+    build: chall
+    ports:
+      - "17171:1337"

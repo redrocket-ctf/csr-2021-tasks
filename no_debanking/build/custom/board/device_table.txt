@@ -1,0 +1,3 @@
+/usr/bin/secret_app f 711 root root - - - - -
+/usr/bin/strace f 755 root root - - - - -
+|xattr cap_sys_ptrace+eip

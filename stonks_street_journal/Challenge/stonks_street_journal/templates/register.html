@@ -1,0 +1,109 @@
+{% extends "base.html" %}
+{% block content %}
+<div>
+                    <section class="u-headlines u-headlines--view-contentsize u-headlines--list-style-none" style="padding:1.25rem;display:block;">
+                        <div class="u-headlines__section-header" style="margin-bottom: 1.75rem;font-family: Source Sans Pro,sans-serif;font-weight: 400;">
+                            <div class="u-sectionheader">
+                                <div class="u-sectionheader__left" style="display: flex;-webkit-box-flex: 1;flex-grow: 1;box-sizing: border-box;">
+                                    <h2 class="u-sectionheader__headline" style="border-bottom: .125rem solid #af292e;color: #af292e;display: inline-block;font-family: Arial,monospace;font-size: .875rem;font-weight: 700;letter-spacing: .09375rem;line-height: .875rem;margin-bottom: -.0625rem;padding: .4375rem 0;text-transform: uppercase;">
+                                        Register for premium stonks market news!
+                                    </h2>
+                                </div>
+                                <div class="u-sectionheader__right"></div>
+                            </div>
+                        </div>
+
+                        <div class="u-headlines__teasers">
+                            <div class="u-headlines__teaser">
+                                <div class="u-teaser__content">
+                                    <p>By registering you receive access to premium news on.</p>
+                                    <ol style="list-style-type:decimal;">
+                                        <li>The stonks market.</li>
+                                        <li>New stonks coins.</li>
+                                        <li>Your stonks lifestyle.</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    {% if errors %}
+                        <div class="u-headlines__teasers" style="color: red">
+                        <h3>Invalid data submitted in:</h3>
+                        <ul>
+                            {% for error in errors %}
+                               <li>{{ error }}</li>
+                            {% endfor %}
+                        </ul>
+                        </div>
+                    {% endif %}
+                        <form method="post" action="/register">
+                            <div style="padding-top:1rem;">
+                                <div  style="-webkit-box-pack: justify;-ms-flex-pack: justify;justify-content: space-between;margin-bottom: 1rem;">
+                                    <div class="u-headlines__text-filter">
+                                        <div class="u-input u-input--type-text">
+                                            <label style="display: block;font-weight: 600;font-size: .8125rem;color: #080707;line-height: .8125rem;">Username</label>
+                                            <div class="u-input__content-wrapper">
+                                                <input name="username" value="" type="text" required="required" style="height: 2.375rem;line-height: 2.25rem;border: 1px solid #bbb;border-radius: .125rem;color: #1c1c1c;font-family: Source Sans Pro,sans-serif;font-size: .875rem;padding-left: .75rem;padding-right: .75rem;width: 18.75rem;" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div  style="-webkit-box-pack: justify;-ms-flex-pack: justify;justify-content: space-between;margin-bottom: 1rem;">
+                                <div class="u-headlines__text-filter">
+                                    <div class="u-input u-input--type-text">
+                                        <label style="display: block;font-weight: 600;font-size: .8125rem;color: #080707;line-height: .8125rem;">Password</label>
+                                        <div class="u-input__content-wrapper">
+                                            <input name="password" id="password" value="" type="password" required="required" style="height: 2.375rem;line-height: 2.25rem;border: 1px solid #bbb;border-radius: .125rem;color: #1c1c1c;font-family: Source Sans Pro,sans-serif;font-size: .875rem;padding-left: .75rem;padding-right: .75rem;width: 18.75rem;" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="padding-top:1rem;">
+                                <div style="-webkit-box-pack: justify;-ms-flex-pack: justify;justify-content: space-between;margin-bottom: 1rem;">
+                                    <div class="u-headlines__text-filter">
+                                        <div class="u-input u-input--type-text">
+                                            <label style="display: block;font-weight: 600;font-size: .8125rem;color: #080707;line-height: .8125rem;">Pensi Length</label>
+                                            <div class="u-input__content-wrapper">
+                                                <input name="pensi" value="" type="text" required="required" placeholder="35" style="height: 2.375rem;line-height: 2.25rem;border: 1px solid #bbb;border-radius: .125rem;color: #1c1c1c;font-family: Source Sans Pro,sans-serif;font-size: .875rem;padding-left: .75rem;padding-right: .75rem;width: 18.75rem;" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div  style="-webkit-box-pack: justify;-ms-flex-pack: justify;justify-content: space-between;margin-bottom: 1rem;">
+                                <div class="u-headlines__email-filter">
+                                    <div class="u-input u-input--type-email">
+                                        <label style="display: block;font-weight: 600;font-size: .8125rem;color: #080707;line-height: .8125rem;">Email Address</label>
+                                        <div class="u-input__content-wrapper">
+                                            <input name="email" value="" type="email" required="required" style="height: 2.375rem;line-height: 2.25rem;border: 1px solid #bbb;border-radius: .125rem;color: #1c1c1c;font-family: Source Sans Pro,sans-serif;font-size: .875rem;padding-left: .75rem;padding-right: .75rem;width: 18.75rem;" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div  style="-webkit-box-pack: justify;-ms-flex-pack: justify;justify-content: space-between;margin-bottom: 1rem;">
+                                <div class="u-headlines__email-filter">
+                                    <div class="u-input u-input--type-email">
+                                        <label style="display: block;font-weight: 600;font-size: .8125rem;color: #080707;line-height: .8125rem;">Credit Card Number</label>
+                                        <div class="u-input__content-wrapper">
+                                            <input name="credit_card" value="" type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="cc-number" maxlength="19" placeholder="xxxx xxxx xxxx xxxx" required="required" style="height: 2.375rem;line-height: 2.25rem;border: 1px solid #bbb;border-radius: .125rem;color: #1c1c1c;font-family: Source Sans Pro,sans-serif;font-size: .875rem;padding-left: .75rem;padding-right: .75rem;width: 18.75rem;" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="u-headlines__filters">
+                                <div  style="-webkit-box-pack: justify;-ms-flex-pack: justify;justify-content: space-between;margin-bottom: 1rem;">
+                                    <div class="u-headlines__email-filter">
+                                        <div class="u-input u-input--type-email">
+                                            <div class="u-input__content-wrapper">
+                                                <input name="dsButton" value="Register" type="submit" style="height: 2.375rem;line-height: 2.25rem;background-color:#af292e;color:#fff;border: 1px solid #bbb;border-radius: .125rem;font-family: Source Sans Pro,sans-serif;font-size: .875rem;padding-left: .75rem;padding-right: .75rem;" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {% csrf_token %}
+                        </form>
+                        <p>By registering you agree to our terms and conditions. The daily fee of 13.37$ will be deducted from your credit card. Registrations can take up to 5 working days to be completed.</p>
+                    </section>
+                </div>
+{% endblock %}

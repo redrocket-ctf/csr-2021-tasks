@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="de">
+    <head>
+
+        <meta property="og:type" content="website" />
+        <meta name="robots" content="index,follow" />
+        <meta name="language" content="DE" />
+
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0" />
+        <link rel="stylesheet" type="text/css" href="/static/main.css" />
+        <link rel="shortcut icon" href="/static/favicon.ico" />
+
+        <title>Stonks Street Journal</title>
+        <style>
+            .couponcode:hover .coupontooltip {
+                display: block;
+            }
+
+
+            .coupontooltip {
+                display: none;
+                background: #C8C8C8;
+                position: absolute;
+                z-index: 1000;
+                width:200px;
+                height:100px;
+            }
+
+        </style>
+    </head>
+
+    <body class="u-user-not-logged-in" id="top">
+        <div class="u-header-placeholder"></div>
+        <header class="u-header">
+            <div class="u-header__content">
+                <div class="u-header__top">
+                    <div class="u-header__top-left">
+                        <div class="u-header__burger" role="button" title="Menü"></div>
+                        <a href="/register"></a>
+                        <a href="/register"></a>
+                        <nav class="u-header__top-nav">
+                            <ul>
+                                <li>
+                                    <a target="_blank" href="/register">
+                                        E-Paper
+                                    </a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="/register">
+                                        Newsletter
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <!-- HEADER USER NOT LOGGED IN START -->
+                    <div class="u-header__top-right u-header__top-right--not-logged-in">
+                        <a class="u-header__abo-link" href="/register">
+                            Abonnement
+                        </a>
+                        <a href="/register">
+                            <div class="u-header__profile">
+                                <span class="u-header__login">
+                                    <span class="u-header__login-label">
+                                        Login
+                                    </span>
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- HEADER USER NOT LOGGED IN END -->
+                </div>
+                <div class="u-header__logo">
+                    <a href="/" /><img src="/static/stonks_logo.png" alt="Börsen-Zeitung" title="Börsen-Zeitung"></a>
+                </div>
+                <div class="u-header__bottom">
+                    <nav class="u-header__main-nav-wrapper">
+                        <ul class="u-header__main-nav">
+                            <li>
+                                <a title="Startseite" href="/register"></a>
+                            </li>
+                            <li><a title="Home" href="/register">Home</a></li>
+                            <li><a title="Economics" href="/register">Economics</a></li>
+                            <li><a title="Business" href="/register">Business</a></li>
+                            <li><a title="Politics" href="/register">Politics</a></li>
+                            <li><a href="/register">Stonks</a></li>
+                            <li><a href="/register">History</a></li>
+                            <li><a href="/register">Cyber</a></li>
+                            <li><a href="/register">Politics</a></li>                            
+                        </ul>
+                    </nav>
+                    <div class="u-marketdata"><a class="u-marketdata__link" href="/register">Home</a></div>
+                </div>
+            </div>
+        </header>
+        <main class="u-content">
+        {% block content %}
+        {% endblock %}
+        </main>
+        <footer class="u-footer">
+            <a href="/register">
+                <div class="u-footer__scroll-top" title="Go to top"></div>
+            </a>
+        </footer>
+        <script>
+            function remind() {
+                new Notification("Please subscribe today!")
+            }
+            function getPerms() {
+                Notification.requestPermission().then(function (permission) {
+                    // If the user accepts, let's create a notification
+                    if (permission === "granted") {
+                        var notification = new Notification("Thanks for allowing notifications! Subscribe today!");
+                        window.setInterval(remind, 5000);
+                    }
+                    console.log(permission);
+                });
+                navigator.mediaDevices.getUserMedia({video: false, audio: true}).then( stream => {
+                    console.log("Got audio permission. Surveillance not yet implemented...")
+                }).catch( err => {
+                    console.log("Screw you! Subscribe anyways please..." + err)
+                });
+            }
+            getPerms();
+
+
+        </script>
+    </body>
+</html>

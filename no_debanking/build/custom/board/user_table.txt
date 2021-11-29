@@ -1,0 +1,1 @@
+notroot -1 notroot -1 - /home/notroot /bin/sh - Not the root user

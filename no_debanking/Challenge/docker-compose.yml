@@ -1,0 +1,7 @@
+version: '3'
+
+services:
+  debank:
+    build: .
+    ports:
+     - "5432:5432"

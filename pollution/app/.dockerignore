@@ -1,0 +1,8 @@
+README.md
+exploit.py
+.dockerignore
+npm-debug.log
+node_modules
+Dockerfile
+.git
+.gitignore

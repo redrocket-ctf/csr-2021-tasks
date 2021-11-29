@@ -1,0 +1,25 @@
+version: "3.9"
+services:
+  nginx:
+    restart: always
+    image: nginx:1.21.3
+    volumes:
+      - ./config/nginx:/etc/nginx
+      - ./web/default:/srv/www
+    links:
+      - cdn:cdn
+      - beta:beta
+    ports:
+      - 80:80
+      - 443:443
+  cdn:
+    restart: always
+    image: httpd:2.4.50
+    volumes:
+      - ./config/apache:/usr/local/apache2/conf
+      - ./docker/beta/app:/app:ro
+  beta:
+    restart: always
+    build: ./docker/beta
+    volumes:
+      - ./docker/beta/app:/app:ro

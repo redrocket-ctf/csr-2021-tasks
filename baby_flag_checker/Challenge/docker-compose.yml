@@ -1,0 +1,13 @@
+version: '2.2'
+
+services:
+  pwn:
+    build: .
+    ports:
+     - "53921:4000"
+    pids_limit: 200
+    cpus: 0.5
+    mem_limit: 200m
+    restart: unless-stopped
+    environment:
+      FLAG: CSR{should_have_used_strlcpy_instead}

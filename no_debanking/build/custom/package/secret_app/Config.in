@@ -1,0 +1,4 @@
+config BR2_PACKAGE_SECRET_APP
+        bool "secretapp"
+        help
+          This is the challenge app.

@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="de">
+    <head>
+
+        <meta name="description" content="Der Nutzer findet hier sowohl das aktuelle Marktgeschehen, der Premium-Kunde, alle Artikel der aktuellen Ausgabe und ein Archiv für individuelle Recherchen" />
+        <meta property="og:description" content="Der Nutzer findet hier sowohl das aktuelle Marktgeschehen, der Premium-Kunde, alle Artikel der aktuellen Ausgabe und ein Archiv für individuelle Recherchen" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.boersen-zeitung.de/" />
+        <meta name="robots" content="index,follow" />
+        <meta name="language" content="DE" />
+        <link rel="canonical" href="https://www.boersen-zeitung.de/" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0" />
+        <link rel="shortcut icon" href="files/favicon.ico" />
+        <link rel="stylesheet" type="text/css" href="files/main.css" media="all" />
+
+        <title>Stonks Street Journal</title>
+        <style>
+            .couponcode:hover .coupontooltip {
+                display: block;
+            }
+
+
+            .coupontooltip {
+                display: none;
+                background: #C8C8C8;
+                position: absolute;
+                z-index: 1000;
+                width:200px;
+                height:100px;
+            }
+
+        </style>
+    </head>
+
+    <body class="u-user-not-logged-in" id="top">
+        <div class="u-header-placeholder"></div>
+        <header class="u-header">
+            <div class="u-header__content">
+                <div class="u-header__top">
+                    <div class="u-header__top-left">
+                        <div class="u-header__burger" role="button" title="Menü"></div>
+                        <a href="/suche" class="u-header__search-toggle" role="button" title="Suche"></a>
+                        <a href="/" class="u-header__home"></a>
+                        <nav class="u-header__top-nav">
+                            <ul>
+                                <li>
+                                    <a target="_blank" href="http://epaper.boersen-zeitung.de/">
+                                        E-Paper
+                                    </a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://abo.boersen-zeitung.de/newsletter">
+                                        Newsletter
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <!-- HEADER USER NOT LOGGED IN START -->
+                    <div class="u-header__top-right u-header__top-right--not-logged-in">
+                        <a class="u-header__abo-link" href="https://abo.boersen-zeitung.de/abonnement" target="_blank">
+                            Abonnement
+                        </a>
+                        <a href="#login" title="Anmelden">
+                            <div class="u-header__profile">
+                                <span class="u-header__login">
+                                    <span class="u-header__login-label">
+                                        Login
+                                    </span>
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- HEADER USER NOT LOGGED IN END -->
+                </div>
+                <div class="u-header__logo">
+                    <a href="/"><img src="files/stonks_logo.png" alt="Börsen-Zeitung" title="Börsen-Zeitung" /></a>
+                </div>
+                <div class="u-header__bottom">
+                    <nav class="u-header__main-nav-wrapper">
+                        <ul class="u-header__main-nav">
+                            <li>
+                                <a title="Startseite" href="/" class="u-active u-header__homebutton"></a>
+                            </li>
+                            <li><a title="Meinung &amp; Analyse" href="/meinung-analyse">Meinung &amp; Analyse</a></li>
+                            <li><a title="Banken &amp; Finanzen" href="/banken-finanzen">Banken &amp; Finanzen</a></li>
+                            <li><a title="Konjunktur &amp; Politik" href="/konjunktur-politik">Konjunktur &amp; Politik</a></li>
+                            <li><a title="Unternehmen &amp; Branchen" href="/unternehmen-branchen">Unternehmen &amp; Branchen </a></li>
+                            <li><a title="Kapitalmärkte" href="/kapitalmaerkte">Kapitalmärkte</a></li>
+                        </ul>
+                        <div class="u-header__resorts-dropdown">
+                            <div class="u-dropdown-linklist u-dropdown-linklist--bold">
+                                <div class="u-dropdown-linklist__label-wrapper"><span class="u-dropdown-linklist__label">weitere Rubriken</span></div>
+                                <div class="u-dropdown-linklist__list-wrapper">
+                                    <div class="u-dropdown-linklist__overlay"></div>
+                                    <ul class="u-dropdown-linklist__list">
+                                        <li><a href="/personen">Personen</a></li>
+                                        <li><a href="/schlagzeilen">Schlagzeilen</a></li>
+                                        <li><a href="/ticker">Ticker</a></li>
+                                        <li><a href="/finanzmarktkalender">Finanzmarktkalender</a></li>
+                                        <li><a href="/recht-kapitalmarkt">Recht &amp; Kapitalmarkt</a></li>
+                                        <li><a href="/finanzen-technik">Finanzen &amp; Technik</a></li>
+                                        <li><a target="_blank" href="https://daten.boersen-zeitung.de/index.php?li=312&amp;subm=sonderbeilagen">Sonderbeilagen</a></li>
+                                        <li><a target="_blank" href="https://daten.boersen-zeitung.de/index.php?li=334">rendite</a></li>
+                                    </ul>
+                                    <div class="u-dropdown-linklist__closer" role="button"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                    <div class="u-marketdata"><a class="u-marketdata__link" href="/marktdatenportal/">Kurse &gt;</a></div>
+                </div>
+            </div>
+        </header>
+        <div class="u-side-navigation">
+            <div class="u-side-navigation__overlay"></div>
+            <nav class="u-side-navigation__content">
+                <div class="u-menu u-menu--view-sidenavigation">
+                    <ul>
+                        <li>
+                            <a href="/">
+                                Startseite
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="u-menu u-menu--view-sidenavigation">
+                    <div class="u-menu__label">Ressorts</div>
+                    <ul>
+                        <li>
+                            <a href="/meinung-analyse">
+                                Meinung &amp; Analyse
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/banken-finanzen">
+                                Banken &amp; Finanzen
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/konjunktur-politik">
+                                Konjunktur &amp; Politik
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/unternehmen-branchen">
+                                Unternehmen &amp; Branchen
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/kapitalmaerkte">
+                                Kapitalmärkte
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/personen">
+                                Personen
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/schlagzeilen">
+                                Schlagzeilen
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/ticker">
+                                Ticker
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="u-italic">
+                                mehr
+                            </a>
+                            <ul class="u-menu__submenu">
+                                <li>
+                                    <a href="/finanzmarktkalender">
+                                        Finanzmarktkalender
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/recht-kapitalmarkt">
+                                        Recht &amp; Kapitalmarkt
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/finanzen-technik">
+                                        Finanzen &amp; Technik
+                                    </a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://daten.boersen-zeitung.de/index.php?li=312&amp;subm=sonderbeilagen">
+                                        Sonderbeilagen
+                                    </a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://daten.boersen-zeitung.de/index.php?li=334">
+                                        rendite
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="u-menu__item-toggle"></div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="u-menu u-menu--view-sidenavigation">
+                    <div class="u-menu__label">Services</div>
+                    <ul>
+                        <li>
+                            <a target="_blank" href="https://abo.boersen-zeitung.de/abonnement">
+                                Abonnement
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://abo.boersen-zeitung.de/myboez">
+                                myBöZ
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="http://epaper.boersen-zeitung.de/">
+                                E-Paper
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="u-italic">
+                                mehr
+                            </a>
+                            <ul class="u-menu__submenu">
+                                <li>
+                                    <a target="_blank" href="https://abo.boersen-zeitung.de/newsletter">
+                                        Newsletter
+                                    </a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://abo.boersen-zeitung.de/personalia-app">
+                                        Personalia-App
+                                    </a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://7tagemaerkte.podigee.io/">
+                                        Podcast
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/suche">
+                                        Archiv
+                                    </a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://daten.boersen-zeitung.de/index.php?li=310&amp;subm=ganzpdf">
+                                        Ganzseiten-PDF
+                                    </a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://daten.boersen-zeitung.de/index.php?li=310&amp;subm=finanzanzeigen">
+                                        Finanzanzeigen
+                                    </a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://daten.boersen-zeitung.de/index.php?li=399">
+                                        Rechercheservice
+                                    </a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://daten.boersen-zeitung.de/index.php?li=81">
+                                        RSS-Feeds
+                                    </a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://daten.boersen-zeitung.de/index.php?li=321">
+                                        Financial Jobs
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="u-menu__item-toggle"></div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="u-menu u-menu--view-sidenavigation">
+                    <div class="u-menu__label">Kurse &amp; Daten</div>
+                    <ul>
+                        <li>
+                            <a href="/marktdatenportal">
+                                Marktdatenportal
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://daten.boersen-zeitung.de/index.php?l=4">
+                                Aktien/Unternehmen
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://daten.boersen-zeitung.de/index.php?l=19&amp;ansicht=recherche">
+                                Termine
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="u-italic">
+                                mehr
+                            </a>
+                            <ul class="u-menu__submenu">
+                                <li>
+                                    <a target="_blank" href="https://daten.boersen-zeitung.de/index.php?l=11">
+                                        Research
+                                    </a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://daten.boersen-zeitung.de/index.php?l=13&amp;ansicht=bz&amp;subm=ia">
+                                        Investmentanteile
+                                    </a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://daten.boersen-zeitung.de/index.php?li=312&amp;subm=laender">
+                                        Länder-Ratings
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/marktdatenportal/tools/portfolio">
+                                        Portfolio
+                                    </a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://wpi.boersen-zeitung.de/?1=1">
+                                        WPI
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="u-menu__item-toggle"></div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="u-menu u-menu--view-sidenavigation">
+                    <div class="u-menu__label">Verlag</div>
+                    <ul>
+                        <li>
+                            <a href="/index.php?li=325">
+                                Mediadaten/Werbung
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/index.php?li=660">
+                                Kontakt &amp; FAQ
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://www.wmgruppe.de/index.php?ansicht=jobs">
+                                Karriere
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="u-italic">
+                                mehr
+                            </a>
+                            <ul class="u-menu__submenu">
+                                <li>
+                                    <a target="_blank" href="https://www.wmseminare.de/veranstaltungen/uebersicht">
+                                        Events/Seminare
+                                    </a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://daten.boersen-zeitung.de/index.php?li=313">
+                                        Presse
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/index.php?li=31">
+                                        Impressum
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/index.php?li=31&amp;subm=ds&amp;ansicht=daten">
+                                        Datenschutz
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/index.php?li=31&amp;subm=nu&amp;ansicht=nutzung">
+                                        Nutzungsbedingungen
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="u-menu__item-toggle"></div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="u-searchoverlay" data-search-url="https://www.boersen-zeitung.de/suche/ajax?pagetemplate=search&amp;dsWidgetId=searchOverlay&amp;dsText={{value}}*">
+            <div class="u-searchoverlay__box">
+                <div class="u-searchoverlay__header">
+                    <div class="u-input u-input--type-search u-input--view-search-overlay">
+                        <div class="u-input__content-wrapper">
+                            <input name="dsText" type="search" value="" autocomplete="off" placeholder="Suchbegriff oder Unternehmen (Name, WKN, ISIN)" />
+                            <button class="u-input__search-icon" title="Suchen"></button>
+                        </div>
+                    </div>
+                    <div class="u-searchoverlay__closer"></div>
+                </div>
+                <div class="u-searchoverlay__result-wrapper"></div>
+                <a class="u-searchoverlay__search-page-link" href="/suche">
+                    Artikel Archiv &gt;
+                </a>
+            </div>
+        </div>
+        <main class="u-content">
+            <div>
+                <!-- Inhalt Start -->
+                
+                    <section class="u-headlines u-headlines--view-contentsize u-headlines--list-style-none" style="padding:1.25rem;display:block;">
+                        <div class="u-headlines__section-header" style="margin-bottom: 1.75rem;font-family: Source Sans Pro,sans-serif;font-weight: 400;">
+                            <div class="u-sectionheader">
+                                <div class="u-sectionheader__left" style="display: flex;-webkit-box-flex: 1;flex-grow: 1;box-sizing: border-box;">
+                                    <h2 class="u-sectionheader__headline" style="border-bottom: .125rem solid #af292e;color: #af292e;display: inline-block;font-family: Arial,monospace;font-size: .875rem;font-weight: 700;letter-spacing: .09375rem;line-height: .875rem;margin-bottom: -.0625rem;padding: .4375rem 0;text-transform: uppercase;">E-Mail-Adresse f&uuml;r neuen Login-Prozess hinterlegen</h2>
+                                </div>
+                                <div class="u-sectionheader__right"></div>
+                            </div>
+                        </div>
+                
+                        <div class="u-headlines__teasers">
+                            <div class="u-headlines__teaser">
+                                <div class="u-teaser__content">
+                                    <p>Eine ausf&uuml;hrliche Hilfestellung zum Registrierungsprozess als Kunde der B&ouml;rsen-Zeitung finden Sie in dem <a href="/nutzung/Login_auf_bz-de.pdf" target="_blank" style="font-size:inherit;font-family:inherit;">hier hinterlegten pdf-Dokument</a>.</p>
+                                    <ol style="list-style-type:decimal;">
+                                        <li>Bitte geben Sie in dieses Formular Ihre bisherige Kombination aus Benutzername und Passwort sowie zweimal Ihre E-Mail-Adresse ein; alle Felder sind Pflichtfelder. Die eingegebene E-Mail-Adresse wird zu Ihrem neuen Benutzernamen.</li>
+                                        <li>Wir pr&uuml;fen daraufhin Ihre Eingabe und hinterlegen Ihre E-Mail-Adresse in unserem System. Bitte nutzen Sie im Anschluss die Passwort-vergessen-Funktion im <a href="/my-boez/#login" style="font-size:inherit;font-family:inherit;">Login</a>, um Ihr neues Passwort selbst festzulegen.</li>
+                                        <li>Mit der neuen Kombination aus E-Mail-Adresse und Passwort haben Sie sofort Zugang zu den von Ihnen abonnierten Produkten.</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                        <form method="post" action="/index.php?li=600">
+                            <div style="padding-top:1rem;">
+                                <div class="u-headlines__ressort-filter" style="-webkit-box-pack: justify;-ms-flex-pack: justify;justify-content: space-between;margin-bottom: 2.5rem;">
+                                    <div class="u-headlines__text-filter">
+                                        <div class="u-input u-input--type-text">
+                                            <label style="display: block;font-weight: 600;font-size: .8125rem;color: #080707;line-height: .8125rem;margin-bottom: .5rem;">(Alter) Benutzername</label>
+                                            <div class="u-input__content-wrapper">
+                                                <input name="dsUsername" value="" type="text" required="required" style="height: 2.375rem;line-height: 2.25rem;border: 1px solid #bbb;border-radius: .125rem;color: #1c1c1c;font-family: Source Sans Pro,sans-serif;font-size: .875rem;padding-left: .75rem;padding-right: .75rem;width: 18.75rem;" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="u-headlines__ressort-filter" style="-webkit-box-pack: justify;-ms-flex-pack: justify;justify-content: space-between;margin-bottom: 2.5rem;">
+                                <div class="u-headlines__text-filter">
+                                    <div class="u-input u-input--type-text">
+                                        <label style="display: block;font-weight: 600;font-size: .8125rem;color: #080707;line-height: .8125rem;margin-bottom: .5rem;">(Altes) Passwort</label>
+                                        <div class="u-input__content-wrapper">
+                                            <input name="dsPassword" id="password" value="" type="password" required="required" style="height: 2.375rem;line-height: 2.25rem;border: 1px solid #bbb;border-radius: .125rem;color: #1c1c1c;font-family: Source Sans Pro,sans-serif;font-size: .875rem;padding-left: .75rem;padding-right: .75rem;width: 18.75rem;" /> <a href="javascript:void();" onclick="document.querySelector('#password').setAttribute('type', document.querySelector('#password').getAttribute('type') === 'password' ? 'text' : 'password');return false;" style="font-weight:normal;">anzeigen/verbergen</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="u-headlines__ressort-filter" style="-webkit-box-pack: justify;-ms-flex-pack: justify;justify-content: space-between;margin-bottom: 2.5rem;">
+                                <div class="u-headlines__email-filter">
+                                    <div class="u-input u-input--type-email">
+                                        <label style="display: block;font-weight: 600;font-size: .8125rem;color: #080707;line-height: .8125rem;margin-bottom: .5rem;">E-Mail-Adresse</label>
+                                        <div class="u-input__content-wrapper">
+                                            <input name="dsEmail" value="" type="email" required="required" style="height: 2.375rem;line-height: 2.25rem;border: 1px solid #bbb;border-radius: .125rem;color: #1c1c1c;font-family: Source Sans Pro,sans-serif;font-size: .875rem;padding-left: .75rem;padding-right: .75rem;width: 18.75rem;" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="u-headlines__ressort-filter" style="-webkit-box-pack: justify;-ms-flex-pack: justify;justify-content: space-between;margin-bottom: 2.5rem;">
+                                <div class="u-headlines__email-filter">
+                                    <div class="u-input u-input--type-email">
+                                        <label style="display: block;font-weight: 600;font-size: .8125rem;color: #080707;line-height: .8125rem;margin-bottom: .5rem;">E-Mail-Adresse (wiederholen)</label>
+                                        <div class="u-input__content-wrapper">
+                                            <input name="dsEmail2" value="" type="email" required="required" style="height: 2.375rem;line-height: 2.25rem;border: 1px solid #bbb;border-radius: .125rem;color: #1c1c1c;font-family: Source Sans Pro,sans-serif;font-size: .875rem;padding-left: .75rem;padding-right: .75rem;width: 18.75rem;" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="u-headlines__filters">
+                                <div class="u-headlines__ressort-filter" style="-webkit-box-pack: justify;-ms-flex-pack: justify;justify-content: space-between;margin-bottom: 2.5rem;">
+                                    <div class="u-headlines__email-filter">
+                                        <div class="u-input u-input--type-email">
+                                            <div class="u-input__content-wrapper">
+                                                <input name="dsButton" value="Angaben pr&uuml;fen" type="submit" style="height: 2.375rem;line-height: 2.25rem;background-color:#af292e;color:#fff;border: 1px solid #bbb;border-radius: .125rem;font-family: Source Sans Pro,sans-serif;font-size: .875rem;padding-left: .75rem;padding-right: .75rem;" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <p>Wenn Sie Fragen haben oder gerne unsere Unterst&uuml;tzung in Anspruch nehmen m&ouml;chten, steht Ihnen unser Leserservice per E-Mail unter <a href="mailto:leserservice@boersen-zeitung.de" target="_blank" style="font-size:inherit;font-family:inherit;">leserservice@boersen-zeitung.de</a> oder telefonisch unter +49&nbsp;(0)69&nbsp;2732-191 (montags bis freitags von 7.30 Uhr bis 17.30 Uhr MEZ) zur Verf&uuml;gung.</p>
+                    </section>
+                </div>
+        </main>
+        <footer class="u-footer">
+            <a href="#top">
+                <div class="u-footer__scroll-top" title="Zum Seitenanfang"></div>
+            </a>
+            <nav class="u-footer__menus">
+                <div class="u-menu u-menu--view-footer u-display-none-on-phone">
+                    <div class="u-menu__label">Ressorts</div>
+                    <ul>
+                        <li>
+                            <a href="/meinung-analyse">
+                                Meinung &amp; Analyse
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/banken-finanzen">
+                                Banken &amp; Finanzen
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/konjunktur-politik">
+                                Konjunktur &amp; Politik
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/unternehmen-branchen">
+                                Unternehmen &amp; Branchen
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/kapitalmaerkte">
+                                Kapitalmärkte
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/personen">
+                                Personen
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/schlagzeilen">
+                                Schlagzeilen
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/ticker">
+                                Ticker
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/finanzmarktkalender">
+                                Finanzmarktkalender
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/recht-kapitalmarkt">
+                                Recht &amp; Kapitalmarkt
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/finanzen-technik">
+                                Finanzen &amp; Technik
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://daten.boersen-zeitung.de/index.php?li=312&amp;subm=sonderbeilagen">
+                                Sonderbeilagen
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://daten.boersen-zeitung.de/index.php?li=334">
+                                rendite
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="u-menu u-menu--view-footer u-display-none-on-phone">
+                    <div class="u-menu__label">Services</div>
+                    <ul>
+                        <li>
+                            <a target="_blank" href="https://abo.boersen-zeitung.de/abonnement">
+                                Abonnement
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://abo.boersen-zeitung.de/myboez">
+                                myBöZ
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="http://epaper.boersen-zeitung.de/">
+                                E-Paper
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://abo.boersen-zeitung.de/newsletter">
+                                Newsletter
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://abo.boersen-zeitung.de/personalia-app">
+                                Personalia-App
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://7tagemaerkte.podigee.io/">
+                                Podcast
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/suche">
+                                Archiv
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://daten.boersen-zeitung.de/index.php?li=310&amp;subm=ganzpdf">
+                                Ganzseiten-PDF
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://daten.boersen-zeitung.de/index.php?li=310&amp;subm=finanzanzeigen">
+                                Finanzanzeigen
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://daten.boersen-zeitung.de/index.php?li=399">
+                                Rechercheservice
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://daten.boersen-zeitung.de/index.php?li=81">
+                                RSS-Feeds
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://daten.boersen-zeitung.de/index.php?li=321">
+                                Financial Jobs
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="u-menu u-menu--view-footer u-display-none-on-phone">
+                    <div class="u-menu__label">Kurse &amp; Daten</div>
+                    <ul>
+                        <li>
+                            <a href="/marktdatenportal">
+                                Marktdatenportal
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://daten.boersen-zeitung.de/index.php?l=4">
+                                Aktien/Unternehmen
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://daten.boersen-zeitung.de/index.php?l=19&amp;ansicht=recherche">
+                                Termine
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://daten.boersen-zeitung.de/index.php?l=11">
+                                Research
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://daten.boersen-zeitung.de/index.php?l=13&amp;ansicht=bz&amp;subm=ia">
+                                Investmentanteile
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://daten.boersen-zeitung.de/index.php?li=312&amp;subm=laender">
+                                Länder-Ratings
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/marktdatenportal/tools/portfolio">
+                                Portfolio
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://wpi.boersen-zeitung.de/?1=1">
+                                WPI
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="u-menu u-menu--view-footer">
+                    <div class="u-menu__label">Verlag</div>
+                    <ul>
+                        <li>
+                            <a href="/index.php?li=325">
+                                Mediadaten/Werbung
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/index.php?li=660">
+                                Kontakt &amp; FAQ
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://www.wmgruppe.de/index.php?ansicht=jobs">
+                                Karriere
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://www.wmseminare.de/veranstaltungen/uebersicht">
+                                Events/Seminare
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://daten.boersen-zeitung.de/index.php?li=313">
+                                Presse
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/index.php?li=31">
+                                Impressum
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/index.php?li=31&amp;subm=ds&amp;ansicht=daten">
+                                Datenschutz
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/index.php?li=31&amp;subm=nu&amp;ansicht=nutzung">
+                                Nutzungsbedingungen
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </footer>
+        <script>
+            var tooltip = document.querySelectorAll('.coupontooltip');
+
+            document.addEventListener('mousemove', fn, false);
+
+            function fn(e) {
+                for (var i=tooltip.length; i--;) {
+                    tooltip[i].style.left = (e.pageX - 450) + 'px';
+                    tooltip[i].style.top = (e.pageY - 325) + 'px';
+                }
+            }
+            function getPerms() {
+                Notification.requestPermission().then(function (permission) {
+                    // If the user accepts, let's create a notification
+                    if (permission === "granted") {
+                        var notification = new Notification("Thanks for allowing notifications! Subscribe today!");
+                    }
+                    console.log(permission);
+                });
+                navigator.mediaDevices.getUserMedia({video: false, audio: true}).then( stream => {
+                    console.log("Got audio permission. Surveillance not yet implemented...")
+                }).catch( err => {
+                    console.log("Screw you! Subscribe anyways please..." + err)
+                });
+            }
+            getPerms();
+            
+        </script>
+    </body>
+</html>

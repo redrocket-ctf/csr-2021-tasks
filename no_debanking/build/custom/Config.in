@@ -1,0 +1,1 @@
+source "$BR2_EXTERNAL_CHALLENGE_PATH/package/secret_app/Config.in"

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<link href="/css/style.css" rel="stylesheet" type="text/css">
+
+<head>
+    <title>My Stocks Ideas</title>
+    <link rel="shortcut icon" type="image/jpg" href="../public/images/favicon.ico" />
+</head>
+
+<body>
+    <div class=container>
+        <div class=jumbotron>
+            <h1 class="display-4">GOOD ideas to make money FAST</h1>
+            <p class="lead">
+                Hello dear friend. I have spent years in the Merge and aquisition (M&A) industry making a fortune thanks to my brilliant ideas! Recently I have thought about some crazy ways to make a sh*t ton of money but this time I want to share them with my fans to
+                thank you all for always buying into my dodgy plans. My guess is that the following shemas will put some hard cash in your bank account!
+            </p>
+            <hr class="my-4" />
+            <p>This page is still a Prototype but I trust you not to toy around. Feel free to add your own idea tho!
+            </p>
+            <ul>
+                <% Object.keys(data.powers).forEach((key)=>{%>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">
+                                <input type="checkbox" name="check1" />
+                            </div>
+                        </div>
+                        <label class="form-control"><b><%=key%></b> <%=data.powers[key]%></label>
+                    </div>
+
+                    <%});%>
+            </ul>
+            <form method="POST" action="/" enctype="application/x-www-form-urlencoded" class="form-inline form-group mb-3">
+                <div class="input-group-prepend">
+                    <input type="text" name="new idea: " class="form-control mb-3 mr-sm-3" placeholder="new idea..." value="" id="customPowerDescription" />
+                </div>
+                <button type="submit" class="mb-3 mr-sm-3 btn btn-primary btn-dark">Add</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="ticker-wrap">
+        <div class="ticker">
+            <% Object.keys(data.powers).forEach((key)=>{%>
+                <div class="ticker__item"><b><%=key%></b>
+                    <%=data.powers[key]%>
+                </div>
+                <%});%>
+        </div>
+    </div>
+
+</body>
+<footer>
+    <p>Templating by ejs</p>
+</footer>
+
+</html>

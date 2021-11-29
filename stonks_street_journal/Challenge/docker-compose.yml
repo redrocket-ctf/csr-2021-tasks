@@ -1,0 +1,29 @@
+version: '3.5'
+
+services:
+  nginx:
+    restart: always
+    image: nginx
+    ports:
+      - "8889:8889"
+    volumes:
+      - ./docker/nginx/:/etc/nginx/conf.d
+      - ./stonks_street_journal/templates/static:/opt/static
+    depends_on:
+      - django
+  django:
+    restart: always
+    build: stonks_street_journal
+    depends_on:
+      - db
+  invoice-system:
+    restart: always
+    build: invoice_system
+    depends_on: 
+      - db
+
+  db:
+    restart: always
+    build: db
+    environment:
+      - POSTGRES_HOST_AUTH_METHOD=trust
